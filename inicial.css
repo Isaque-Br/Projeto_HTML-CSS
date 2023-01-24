@@ -1,0 +1,146 @@
+header {
+	background: #696969;  /*fundo do cabeçalho em cinza escuro*/
+	padding: 20px 0;	  /*Colocando no cabeçalho espaçamento interno de 20px cima e baixo e 0 direita e esquerda. Colocamos o padding para não deixar o conteudo do cabeçalho chegar na margem*/
+}
+
+.caixa {	
+	position: relative;			/*Chamando a classe do HTML pra dar tamanhos fixos, como largura..*/	
+	width: 940px;				/*Colocando a caixa com 940 pixels que é o padrão*/
+	margin: 0 auto;					/*Posicionamento relative para levantar a caixa e ficar dentro do Menu*/
+									/*Na caixa o espaçamento externo, pra cima e pra baixo seja 0, e para os lados seja auto, se calcule automatico */
+}								/*O menu <nav> está colado na caixa*. O menu é absoluto mas a caixa é relativa, então ele é absoluto em relação a caixa, esse outro elemento que tb levantou no HTML(tamanho*/
+
+nav {				/*Tag nav, aquela do menu, home/produtos/contato*/
+	position: absolute;	/*Aquele que sobe e fica na frente da page ou cabeçalho*/
+	top: 110px;				/*Colocando o menu no meio da foto da pagina com espaçamenton de 110px, que é metade da imagem*/
+	right: 0;			/*Colocando o menu na direita com zero de espaçamento*/
+}
+
+nav li {				/*Todos os itens da lista que estão dentro da tag de navegação*/
+	display: inline;	/*forma inline o conteudo fica um ao lado do outro e só ocupa o tamanho do conteudo que está ali. Quando é do tipo block, ocupará 100% da pagina*/
+	margin: 0 0 0 15px;			/*Primeiro é o topo depois a direita terceiro para baixo e ultimo a esquerda*/			/*Espaçmento externo é chamado de margin. É o espaço entre os nomes Home/Produtos/Contato*/
+}
+
+nav a {							/*Todos os links<a> da navegação*/
+	text-transform: uppercase;	/*transformando todo o texto em maiusculo*/
+	color: black;				/*Mudando a cor para preto*/
+	font-weight: bold;			/*Colocando peso da fonte em negrito(bold)*/
+	font-size: 23px;			/*tamanho da fonte*/
+	text-decoration: none;		/*tirando o sublinhado do texto*/
+}
+
+nav a:hover {
+	color: pink;
+	text-decoration: underline;
+}
+
+body {
+
+}
+
+
+.principal {
+	background: #cccccc;
+	padding: 30px;
+}
+
+.titulo-centralizado {
+	text-align: center;
+	font-size: 25px;
+	padding: 10px 0;			/*Espaçamento interno*/
+	margin: 1px auto;			/*Espaçamento externo*/
+}
+
+
+.sobre-barbearia {					/*Fundo cinza*/
+	text-align: center;						/*Colocando a descrição da barbearia no centro da pagina*/
+	font-size: 20px;
+	padding: 5px 10px 15px 20px;			/*Espaçamento interno, ou ele funciona de todos os lados ou so pra cima ou só para as laterais ou só para baixo*/
+	margin: 0px auto;
+}
+
+/*#missao {		/*Usamos a # para identificador-id*/
+	/*position: relative;
+	text-align: center;
+	font-size: 22px;
+	color: #00BFFF;
+	margin: 15 10 15 15px;
+}*/
+
+em strong {
+	color: black;
+}
+
+.itens {		/*Usamos .nomeClasse para identificar a classe do html*/
+	font-style: italic;  /*Usando a propriedade font-style para colocar o texto em italico*/
+		/* font-weight: bold; Usando a propriedade font-weight para colocar o texto em bold/negrito*/
+	padding: 3px;
+	font-size: 20px;
+}
+
+.beneficios {
+	background: #FFFFFF;
+	padding: 20px;     		/*Espaçamento interno para todos os lados*/
+}
+
+/*Display block - bloqueia o conteudo da linha inteira*/
+/*Imagens deixam ter outros conteudos nas laterais/ Display inline não deixa alteral padding e marfin*/
+/*Elemento com as duas condições, deixa mexer no padding e argin ele é inline e block - ele bloqueia a largura mas é fixa, sou eu q dou o taanho*/
+
+ul {						/*A lista*/  
+	display: inline-block;	/*Display só ocupa o tamanho do conteudo e deixa usar/mexer na largura e espaçamento e/os outros espaços*/
+	vertical-align: top;	/*Alinhando os elementos(lista beneficios) pela linha de cima. Padrão é ser alinhado pela linha de baixo */
+	width: 20%; 			/*Largura de 20% da pagina*/
+	margin-right: 15%;		/*Margem pra direita de 15%*/
+}
+
+.imagembeneficios {
+	width: 50%;			/*Imagem com 50% da largura da pagina*/
+}
+
+footer {
+	text-align: center;			/*TODO CONTEUDO DO FOOTER CENTRALIZADO*/
+	background: url("bg.jpg");			/*QUANDO QUER BOTAR UMA IMAGEM, COLOCA O ENDERECO DA MESMA, MESMO SENDO UMA IMAGEM PEQUENA, O CSS PREENCHE*/
+	padding: 40px 0;				/* ALTERANDO ABORDA/ ESPACAMENTO INTERNO/ 40 PIXELS PRA CIMA E PRA BAIXO E 0 PARA OS LADOS*/
+}
+
+.copyright {					/*CRIEI UMA CLASSE NO HTML - P/ PARA EDITAR O COPYRIGHT = CONTEUDO DO SITE NAO PODE SER COPIADO*/
+	color: #FFFFFF;
+	font-size: 13px;			/*AQUI ALTEREI O TAMANHO DO TEXTO*/
+	margin: 20px 0 0;				/*COLOCANDO ESPACAMENTO ENTRE O LOGO E O COPYRIGHT*/
+}
+
+/* css da page inicial*/
+.banner {
+	width: 100%;
+}
+
+.titulo-principal {
+	text-align: center;
+	font-size: 2em;   /*2em ele dobra o valor do titulo base, se for 15 vira 30/ A fonte do titulo principal sempre será o dobro*/
+	margin: 0 0 1em;	/*margin proporcional ao tamanho da fonte, para baixo um em*/
+}
+
+.principal p {
+	margin: 0 0 1em; /*Colocando espaçamento para baixo no texto*/
+}
+
+.principal strong {
+	font-weight: bold;
+}
+
+.principal em {
+	font-style: italic;
+}
+
+.imagembeneficios {
+	width: 60%;
+}
+
+
+
+
+
+
+
+

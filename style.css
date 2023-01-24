@@ -1,0 +1,396 @@
+body {
+	font-family: 'Poppins', sans-serif;  /*Colocando uma font da web que funciona na maioria dos navegadores, import google*/
+}
+
+header {					/*cabeçalhho */		
+	background: linear-gradient(#20B2AA 30%,#FFDAB9);
+	padding: 20px 0;       /*ESPAÇAMENTO INTERNO*margenstopo, down = 20px  right, left  da borda */
+}   
+
+.caixa {
+	position: relative;    /*coloca menu dentro da caixa, levanta*/
+	width: 940px;         /*940 pix na caixa largura padrao web*/
+	margin: 0 auto;       /*colocando margens iguais=0 e auto esquerda e direita*/
+}
+
+nav {                     /*NAV É NAVEGACAO = MENU*/   /*ul é lista nao ordenada, li é o item da lista = descricao de um produto */
+	position: absolute;   /* POSICAO ESTATICA É A LINHA DO MENU LADO ESQUERDO PADRAO. POSICAO RELATIVE É QUANDO DESLOCA DO PONTO DE PARTIDA, RIGHT, LEFT, TOP...*/
+	top: 110px;				/*RESET.CSS LIMPA TUDO QUE O NAVEGADOR CRIA AUTOMATICAMENTE */
+	right: 0;
+}
+
+nav li {
+	display: inline;
+	margin: 0 0 0 15px; 
+}
+
+nav a {						/*menu de navegacao + link a */
+	font-family: 'Lobster', cursive;
+	color: #000000;	
+	font-weight: bold;			/*colocamos o texto com peso em negrito*/
+	font-size: 30px;
+	text-decoration: none; 		/*tirando o sublinhado*/
+	text-shadow: 1px 1px #20B2AA;  /*Sombra no texto #FFDAB9,#20B2AA)*/
+}
+
+nav a:hover {						/*QUANDO O MOUSE ESTA EM CIMA DO ELEMENTO, PEGANDO O LINK A do menu navegacao*/
+	color: #FFDAB9;					/*COLOCANDO COR QUANDO PASSA COM MOUSE*/
+	text-decoration: underline;		/*colocando sublinhado quando passa o mouse*/
+}
+
+
+.contato {						/*Main backgroud no Contato, em volta do nome e sobrenome até sexta ás 18 por dentro*/
+	background: linear-gradient(#20B2AA 30%,#FFDAB9, #20B2AA 10%);
+}		
+
+.produtos {              /* classe produto que marca a lista a ul, lista é um elemento de bloco, ou seja, ele ocupa 100% da largura */
+	width: 100%;
+	background: linear-gradient(#FFDAB9, #20b2aa);
+	margin: 0 auto;
+	padding: 50px 0;     /*aumentando espacamento interno, criando uma borda, com 50px cima e baixo e 0 os lados */
+}
+
+
+.produtos li {
+	background: #fefefe;
+	display: inline-block; 			 /*comportamento de display, coloca os itens um do lado do outro só ocupam o tamanho deles, inline block sempre alinha os elementos pela linha de baixo*/
+	text-align: center;   			  /*colocando uma propriedade para alinhar o conteudo ao centro*/
+	width: 30%;         			    /* colocando cada item com 30% da largura da pagina*/
+	vertical-align: top; 			   /* orientando alinhamento pela linha de cima */
+	/*background: #CCCCCC;*/   				 /*COLOCANDO COR NA BORDA*/
+	margin: 0 1.5%;        				 /* ESPACAMENTO EXTERNO ENTRE OS ITENS, 0 PRA CIMA E BAIXO E 1.5 LADOS */
+	padding: 30px 20px;					/* ESPACAMENTO INTERNO, NA DESCRICAO PARA AS BORDAS */
+	box-sizing: border-box;            /*faz com q os 30% de width seja fixo, sempre a largura. px 30n e 20 do espacamento interno ta dentro dos 30% */
+	border-color: #000000; 					/*CONFIG color QUE MONTA UMA BORDA*/
+	border-width: 2px;					/*borda com 2px de largura*/
+	border-style: solid;				/*estilo da borda*/
+	/*border:  2px solid #000000			/*BORDA UNIFICADA TAMANHO - TIPO - E COR*/
+ 	border-radius: 10px;  				/*ARREDONDA TODOS OS CANTOS DA BORDA*/
+ }
+
+ .produtos li:hover {					/*hover = quando o mouse tiver por cima troca a cor*/
+ 	 border-color: #20B2AA;             /*BORDA SIMPLIFICADA*/
+ }
+
+ .produtos li:active {				/*QUANDO O CLICK DO MOUSE TIVER PRESSIONADO, MUDO DE COR*/
+  	  border-color: #FFDAB9; 
+ }	
+
+ .produtos li:hover h2 {			/*QUANDO O MOUSE ESTIVER EM CIMA DE PRODUTOS EU QUERO Q O H2 MUDE - font*/
+ 	  font-size: 34px;
+ }				
+
+.produtos h2 {             /* editando o titulo do item*/
+	font-size: 30px;         /* tamanho da fonte 30px */
+	font-weight: bold;       /*  peso em negrito*/
+}
+
+.produto-descricao {
+	font-size: 20px;
+
+}
+
+.produto-preco {             /*criando uma classe para editar no css o preco do produto*/
+	font-size: 35px;
+	font-weight: bold;
+	margin: 10px 0 0;              /*espacamento externo de 10px, lados e baixo zero*/
+								/* EXEMPLO SIMPLIFICADO margin-top: 10px*/
+}
+
+footer {
+	text-align: center;			/*TODO CONTEUDO DO FOOTER CENTRALIZADO*/
+	background: url("bg.jpg");			/*QUANDO QUER BOTAR UMA IMAGEM, COLOCA O ENDERECO DA MESMA, MESMO SENDO UMA IMAGEM PEQUENA, O CSS PREENCHE*/
+	padding: 40px 0;				/* ALTERANDO ABORDA/ ESPACAMENTO INTERNO/ 40 PIXELS PRA CIMA E PRA BAIXO E 0 PARA OS LADOS*/
+}
+
+.copyright {					/*CRIEI UMA CLASSE NO HTML - P/ PARA EDITAR O COPYRIGHT = CONTEUDO DO SITE NAO PODE SER COPIADO*/
+	color: #FFFFFF;
+	font-size: 13px;			/*AQUI ALTEREI O TAMANHO DO TEXTO*/
+	margin: 20px 0 0;				/*COLOCANDO ESPACAMENTO ENTRE O LOGO E O COPYRIGHT*/
+}
+								/*UNICODE É UMA LINGUAGEM UNIVERSAL QUE TEM VARIOS CARACTERE ESECIFICO/ESPECIAS COMO O SIMBOLO DO COPYRIGHT*/
+								/*unicode-table.com*/  /*copyright = Sinal de direitos autorais*/
+								/*USAMOS FORMA DE ENTIDADE PARA ADICIONAR CARACTERE ESPECIAL, COMO &copy; PARA O COPYRIGHT*/
+			/*Contato*/
+form {
+	background: linear-gradient(#FFDAB9, #20B2AA);
+	padding: 10px 5px 5px 20px;				/*Margem superior e inferior de 40px, lados = 0, EU QUERO QUE TENHA UM ESPAÇO ENTRE O FIM DO CABECALHO E O INICIO DO FORM, E ENTRE O FIM DO FORM E O INICIO DO FOOTER */
+	
+}
+
+
+form label, form legend {		/*trocando  form p por legend*/	/*TODOS OS <p> DO FORM, TERÃO ESSA CONFIGURAÇÃO */	/*PARA QUEBRAR ESTRUTURA DE LINHA E VIRAR VERTICAL, ENTAO TODOS OS CAMPOS QUE SAO <label>* GANHAM DISPLAY BLOCK */
+	display:block;				
+	font-size: 20px;			/*Label de 20px*/
+	margin: 0 0 10px;			/*ESPAÇO ENTRE A Label E O CAMPO QUE VEM LOGO ABAIXO DELA = MARGEM PRA BAIXO DE 10PX;*/
+}
+
+.input-padrao {					/*CRIANDO CLASS PARA DIRECIONAR O QUE QUEREMOS COM TAIS CONFIGURAÇÃO PARA TODOS INPUT E TEXTAREA*/
+	background: #FEFEFE;
+	display: block;				/*ISSO FARÁ COM QUE RAIO BUTTON E AS LABEL FIQUEM ORGANIZADAS, ALEM DO CHECKBOX NA MESMA LINHA*/
+	margin:  0 0 20px;
+	padding: 10px 25px;			/*ESPAÇAMENTO INTERNO DA CAIXA DO IMPUT = 10PX PRA CIMA E PRA BAIXO E 25 PARA OS LADOS*/
+	width: 50%;					/*COLOCANDO LARGURA DA CAIXA/IMPUT COM 50% DA PAGINA*/
+}
+
+.checkbox {					/*Na Classe checkbox, colocaremos... */
+	margin: 30px 0;			/*Colando uma margin pra cima e baixo de 20px e */
+}
+
+.enviar {  					/*Criando class no HTML e estilizando no css formulario/input chamada class="enviar" */
+	width:30%;				/*Aumentando a largura do botão "Enviar formulario"*/
+	padding: 15px 0;		/*15px cima e baixo 0px lados |Aumentando o espaçamento interno entre a borda e o texto*/
+	background: antiquewhite;		/*fundo do botão laranja*/
+	color: black;			/*Cor do texto em branco*/
+	font-weight: : bold;	/*Colocando em negrito*/
+	font-size: 18px;		/*Aumentando a cor da fonte*/
+	/*border: none;	*/		/*Tirando a borda em preto*/
+	border-radius: 5px;
+	transition: 2s all;  /*Mudando a transição de cor quando passa o mouse por cima em 1 segundo*/
+	cursor: pointer;		/*Cursor do mouse se torna uma mãozinha ao invésn da setinha quando é clicavel*/
+}
+
+.enviar:hover {				/*Quando passo o mouse por cima, quero que a cor de fundo mude*/
+	background: #FFDAB9;
+;	/*fundo rosa mais forte quado passa o mouse*/
+	transform: scale(1.5);	/*Usando propriedade transform para aumentar o tamanho proporcionalmente do botão quando passa o mouse, com scale()Escala, medida..fazemos o calculo proporcional, ou seja quero multiplar por 1.2*/
+	transform: rotate(0deg); /*Inclina o item quando passo o mouse em graus especificados. E quando quiser que aumente e gire ao mesmo tempo, especefique uma só vez e coloque em sequencia, o ultimo item sempre subscreve o anterior */
+}
+
+table {					/*Referenciando a tag da tabela*/
+	background: linear-gradient(#FFDAB9 40%, #20B2AA);
+	margin: 10px 10px 20px 20px;		/*Criando espaçamento externo de 20px pra cima, 0px para os lados e 40px pra baixo*/
+	padding: 35px;
+}
+
+thead {
+	background: #FFDAB9;		/*fundo cinza escuro*/
+	color: black;				/*Deixando a cor do item em branco*/
+	font-weight: bold;			/*font em negrito*/
+}
+
+td, th {								/*Mexendo nos item da tabela, ou seja o td, as minhas células */
+	border: 1px solid black;		/*Eu quero uma borda de 1px, quero que seja solida e cor preta*/
+	padding: 8px 15px;				/*Espaçamento pra cima e pra baixo 8px, lateral de 15px */
+}
+
+
+/* css da page inicial*/
+.banner {
+	width: 100%;			/*Colocando o banner com a largura total da page*/
+}
+
+.titulo-principal {
+	text-align: center;     /*Alinhado ao centro*/
+	font-size: 2em; 		/*Medidas proporcionais - 2em signfica duas vezes o tamanho base da fonte*/
+	margin: 0 0 1em;		/*Colocando margin para baixo proporcional ao tamanho da fonte*/
+	clear: left;			/*Limpado e limitando o float a esquerda(utensiliosImagem)*/
+}
+
+.titulo-principal:first-letter {
+	font-weight: bold;
+}
+
+.principal {
+	padding: 3em 0;
+	background: #FEFEFE;
+	width: 940px;
+	margin: 0 auto;
+}
+
+.principal p {				/*Paragrafo*/
+	margin: 0 0 1em;		/*Colocando espaçamento p> proporcional ao tamanho da linha*/
+}
+
+.principal strong {			/*Mexendo no texto onde tem a tag strong*/
+	font-weight: bold;		/*Negrito*/
+}
+
+.principal em {				/*Mexendo onde tem a tag em*/
+	font-style: italic;
+}
+
+.utensilios {
+	width: 120px;
+	float: left;			/*Fazendo o elemento flutuar para o texto ficar emm volta, Quando usamos float, afeta toda a pagina abaixo dele*/
+	margin: 0 20px 20px 0;
+}
+
+.mapa {
+	padding: 3em 0;		/*Espaçamento interno cima e baixo 3m, e 0 para os lados proporcional ao tamanho da fonte do site */
+	background: linear-gradient(#FEFEFE,#FFDAB9);
+}
+/*#FEFEFE,#FFDAB9,#20B2AA*/
+.mapa-conteudo {
+	width: 940px;
+	margin: 0 auto;
+}
+
+.mapa p {
+	margin: 0 0 2em;
+	text-align: center;
+}
+
+.beneficios {
+	padding: 3em 0;
+	background: linear-gradient(#FFDAB9 10%,#20B2AA); 
+}
+
+.conteudo-beneficios {
+	width: 640px;
+	margin: 0 auto;
+}
+
+.lista-beneficios {
+	width: 40%;
+	display: inline-block;	/*Tirando o bloqueio da linha inteira ne o espaço no html para ficar ao lado da img*/
+	vertical-align: top;
+}
+
+.itens {
+	line-height: 1.5; 		/*Altura da linha, espaço entre uma e outra*/
+}
+
+.itens:first-child {		/*Pseudo elemento - pegando a primeira linha dos itens*/
+	font-weight: bold;
+}
+
+.itens:nth-child(4){
+	font-weight: bold;
+}
+
+.itens:before {
+	content: "♤";
+}
+
+.imagem-beneficios {
+	width: 60%;
+	opacity: 1;
+	transition: 500ms;
+	box-shadow: 10px 10px 10px #000000;		/*Eixo y, y e blur*/
+}
+
+.imagem-beneficios:hover {	/*Quando passa com o mouse por cima*/
+	opacity: 0.5;				/*Mostrar 50% da img*/
+}
+
+.video {
+	width: 560px;  			/*Div com 560 de altura*/
+	margin: 2em auto;		/*Margim com 1em cima e baixo auto laterais*/
+}
+
+/*Media query - Adaptando para mobile*/
+@media screen and (max-width: 480px) {	/*Fazendo uma query com valor screen and a pesquisa maximo das telas de 480px */
+	.caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video, .produtos, .produto-descricao, .enviar, .contato {
+		width: auto;		/*Mudando a largura da caixa para mobil*/
+	}
+
+	h1 {
+		text-align: center;
+	}
+
+	nav {
+		position: static;		/*Colocando o menu na parte de baixo*/
+	}
+
+	.titulo-principal {
+		text-align: center;
+		font-size: 25px;
+		font-weight: bold;
+	}
+
+	.utensilios {
+		width: 90px;
+		padding: 5px;
+		margin: 5px 10px 5px 5px;
+	}
+
+	.principal p:not(#missao) {
+		text-align: center;
+		margin: 35px 30px 30px 15px;
+	}
+
+	#missao {
+		text-align: center;
+		margin: 10px 10px 25px 0;
+	}
+
+	.titulo-estabelicimento {
+		text-align: center;
+		margin: 30px 0 10px 0px;
+		padding: 5px 0 10px 0;
+		font-family: 'Poppins', sans-serif;
+		font-weight: bold;
+		font-size: 20px;
+	}
+
+	.mapa p {
+		text-align: center;
+		margin: 2px 5px 15px 5px;
+	}
+
+	.lista-beneficios, .imagem-beneficios {
+		width: 100%;
+	}
+
+	.itens {
+		margin: 0px 25px 30px 30px;
+		line-height: 1;
+	}
+
+	.imagem-beneficios {
+		width: 80%;
+		margin: 15px 20px 20px 30px;
+	}
+
+	.video {
+		width: 70%;
+	}
+	/*Produtos*/
+	.produtos li {
+		margin: 10%;
+		width: 80%;
+	}
+
+	/*Contato*/
+	.enviar {
+		width: 55%;
+		padding: 15px 10px 15px 10px;
+		margin: 10px 5px 2px 0px;
+		background: linear-gradient(#20B2AA 10%, #FFDAB9);
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
